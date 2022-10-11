@@ -163,6 +163,8 @@ def test_fill_out_the_form_without_comment(driver):
     assert "Error: all fields are required" in check_error_message.text
 
 
+@allure.feature("Contact us page")
+@allure.story("Click on the submit button without filling in the fields")
 def test_click_on_the_submit_button_without_filling_in_the_fields(driver):
     with allure.step('Open Home Page'):
         home_page = HomePage(driver)
